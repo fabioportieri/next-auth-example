@@ -77,6 +77,7 @@ export const authOptions: NextAuthOptions = {
       console.log(code, metadata);
     },
   },
+  debug: true,
 };
 
 export default NextAuth(authOptions);
