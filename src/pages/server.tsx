@@ -1,4 +1,3 @@
-import { auth } from "src/auth";
 import Layout from "../components/layout";
 
 import type { GetServerSidePropsContext } from "next";
@@ -35,5 +34,5 @@ export default function ServerSidePage() {
 
 // Export the `session` prop to use sessions with Server Side Rendering
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  return { props: { session: await auth(context.req, context.res) } };
+  // return { props: { session: await auth(context.req, context.res) } };
 }
