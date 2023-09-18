@@ -55,6 +55,8 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.AUTH_KEYCLOAK_ID,
       clientSecret: process.env.AUTH_KEYCLOAK_SECRET,
       issuer: process.env.AUTH_KEYCLOAK_ISSUER,
+      wellKnown:
+        "https://www.datamanagementitalia.it/iamdemo/auth/realms/NUT/.well-known/openid-configuration",
     }),
   ],
   theme: {
@@ -78,6 +80,7 @@ export const authOptions: NextAuthOptions = {
     },
   },
   debug: true,
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 export default NextAuth(authOptions);
