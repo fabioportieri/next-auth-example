@@ -3,8 +3,8 @@ import type {
   NextApiRequest,
   NextApiResponse,
 } from "next";
-import type { NextAuthOptions as NextAuthConfig } from "next-auth/index";
-import { getServerSession } from "next-auth/index";
+import type { NextAuthOptions as NextAuthConfig } from "next-auth";
+import { getServerSession } from "next-auth";
 
 import FortyTwoSchool from "next-auth/providers/42-school";
 import Apple from "next-auth/providers/apple";
@@ -70,12 +70,12 @@ import Zoho from "next-auth/providers/zoho";
 import Zoom from "next-auth/providers/zoom";
 
 // Read more at: https://next-auth.js.org/getting-started/typescript#module-augmentation
-declare module "next-auth/jwt" {
-  interface JWT {
-    /** The user's role. */
-    userRole?: "admin";
-  }
-}
+// declare module "next-auth/jwt" {
+//   interface JWT {
+//     /** The user's role. */
+//     userRole?: "admin";
+//   }
+// }
 
 export const config = {
   // https://next-auth.js.org/configuration/providers/oauth

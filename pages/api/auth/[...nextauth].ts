@@ -1,4 +1,4 @@
-import NextAuth, { NextAuthOptions } from "next-auth/index";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import Auth0Provider from "next-auth/providers/auth0";
 import FacebookProvider from "next-auth/providers/facebook";
 import GithubProvider from "next-auth/providers/github";
@@ -61,7 +61,7 @@ export const authOptions: NextAuthOptions = {
     colorScheme: "light",
   },
   callbacks: {
-    async jwt({ token }) {
+    async jwt({ token }: any) {
       token.userRole = "admin";
       return token;
     },
