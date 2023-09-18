@@ -4,7 +4,6 @@ import type {
   NextApiResponse,
 } from "next";
 import type { NextAuthOptions as NextAuthConfig } from "next-auth";
-import { getServerSession } from "next-auth";
 
 import FortyTwoSchool from "next-auth/providers/42-school";
 import Apple from "next-auth/providers/apple";
@@ -12,16 +11,15 @@ import Atlassian from "next-auth/providers/atlassian";
 import Auth0 from "next-auth/providers/auth0";
 import Authentik from "next-auth/providers/authentik";
 import AzureAD from "next-auth/providers/azure-ad";
-import AzureB2C from "next-auth/providers/azure-ad-b2c";
 import Battlenet from "next-auth/providers/battlenet";
 import Box from "next-auth/providers/box";
-import BoxyHQSAML from "next-auth/providers/boxyhq-saml";
+// import BoxyHQSAML from "next-auth/providers/boxyhq-saml";
 import Bungie from "next-auth/providers/bungie";
 import Cognito from "next-auth/providers/cognito";
 import Coinbase from "next-auth/providers/coinbase";
 import Discord from "next-auth/providers/discord";
 import Dropbox from "next-auth/providers/dropbox";
-import DuendeIDS6 from "next-auth/providers/duende-identity-server6";
+// import DuendeIDS6 from "next-auth/providers/duende-identity-server6";
 import Eveonline from "next-auth/providers/eveonline";
 import Facebook from "next-auth/providers/facebook";
 import Faceit from "next-auth/providers/faceit";
@@ -31,7 +29,7 @@ import Fusionauth from "next-auth/providers/fusionauth";
 import GitHub from "next-auth/providers/github";
 import Gitlab from "next-auth/providers/gitlab";
 import Google from "next-auth/providers/google";
-import Hubspot from "next-auth/providers/hubspot";
+// import Hubspot from "next-auth/providers/hubspot";
 import Instagram from "next-auth/providers/instagram";
 import Kakao from "next-auth/providers/kakao";
 import Keycloak from "next-auth/providers/keycloak";
@@ -46,26 +44,26 @@ import Okta from "next-auth/providers/okta";
 import Onelogin from "next-auth/providers/onelogin";
 import Osso from "next-auth/providers/osso";
 import Osu from "next-auth/providers/osu";
-import Passage from "next-auth/providers/passage";
+// import Passage from "next-auth/providers/passage";
 import Patreon from "next-auth/providers/patreon";
-import Pinterest from "next-auth/providers/pinterest";
+// import Pinterest from "next-auth/providers/pinterest";
 import Pipedrive from "next-auth/providers/pipedrive";
 import Reddit from "next-auth/providers/reddit";
 import Salesforce from "next-auth/providers/salesforce";
 import Slack from "next-auth/providers/slack";
 import Spotify from "next-auth/providers/spotify";
 import Strava from "next-auth/providers/strava";
-import Todoist from "next-auth/providers/todoist";
+// import Todoist from "next-auth/providers/todoist";
 import Trakt from "next-auth/providers/trakt";
 import Twitch from "next-auth/providers/twitch";
 import Twitter from "next-auth/providers/twitter";
-import UnitedEffects from "next-auth/providers/united-effects";
+// import UnitedEffects from "next-auth/providers/united-effects";
 import Vk from "next-auth/providers/vk";
-import Wikimedia from "next-auth/providers/wikimedia";
+// import Wikimedia from "next-auth/providers/wikimedia";
 import Wordpress from "next-auth/providers/wordpress";
 import WorkOS from "next-auth/providers/workos";
 import Yandex from "next-auth/providers/yandex";
-import Zitadel from "next-auth/providers/zitadel";
+// import Zitadel from "next-auth/providers/zitadel";
 import Zoho from "next-auth/providers/zoho";
 import Zoom from "next-auth/providers/zoom";
 
@@ -101,10 +99,10 @@ export const config = {
       clientId: process.env.AUTH_AZUREAD_ID,
       clientSecret: process.env.AUTH_AZUREAD_SECRET,
     }),
-    AzureB2C({
-      clientId: process.env.AUTH_AZUREB2C_ID,
-      clientSecret: process.env.AUTH_AZUREB2C_SECRET,
-    }),
+    // AzureB2C({
+    //   clientId: process.env.AUTH_AZUREB2C_ID,
+    //   clientSecret: process.env.AUTH_AZUREB2C_SECRET,
+    // }),
     Battlenet({
       clientId: process.env.AUTH_BN_ID,
       clientSecret: process.env.AUTH_BN_SECRET,
@@ -114,11 +112,11 @@ export const config = {
       clientId: process.env.AUTH_BOX_ID,
       clientSecret: process.env.AUTH_BOX_SECRET,
     }),
-    BoxyHQSAML({
-      clientId: process.env.AUTH_BOXYHQ_ID,
-      clientSecret: process.env.AUTH_BOXYHQ_SECRET,
-      issuer: process.env.AUTH_BOXYHQ_ISSUER,
-    }),
+    // BoxyHQSAML({
+    //   clientId: process.env.AUTH_BOXYHQ_ID,
+    //   clientSecret: process.env.AUTH_BOXYHQ_SECRET,
+    //   issuer: process.env.AUTH_BOXYHQ_ISSUER,
+    // }),
     Bungie({
       clientId: process.env.AUTH_BUNGIE_ID,
       clientSecret: process.env.AUTH_BUNGIE_SECRET,
@@ -139,10 +137,10 @@ export const config = {
       clientId: process.env.AUTH_DROPBOX_ID,
       clientSecret: process.env.AUTH_DROPBOX_SECRET,
     }),
-    DuendeIDS6({
-      clientId: process.env.AUTH_DUENDEIDS6_ID,
-      clientSecret: process.env.AUTH_DUENDEIDS6_SECRET,
-    }),
+    // DuendeIDS6({
+    //   clientId: process.env.AUTH_DUENDEIDS6_ID,
+    //   clientSecret: process.env.AUTH_DUENDEIDS6_SECRET,
+    // }),
     Eveonline({
       clientId: process.env.AUTH_EVEONLINE_ID,
       clientSecret: process.env.AUTH_EVEONLINE_SECRET,
@@ -183,10 +181,10 @@ export const config = {
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
     }),
-    Hubspot({
-      clientId: process.env.AUTH_HUBSPOT_ID,
-      clientSecret: process.env.AUTH_HUBSPOT_SECRET,
-    }),
+    // Hubspot({
+    //   clientId: process.env.AUTH_HUBSPOT_ID,
+    //   clientSecret: process.env.AUTH_HUBSPOT_SECRET,
+    // }),
     Instagram({
       clientId: process.env.AUTH_INSTAGRAM_ID,
       clientSecret: process.env.AUTH_INSTAGRAM_SECRET,
@@ -245,19 +243,19 @@ export const config = {
       clientId: process.env.AUTH_OSU_ID,
       clientSecret: process.env.AUTH_OSU_SECRET,
     }),
-    Passage({
-      clientId: process.env.AUTH_PASSAGE_ID,
-      clientSecret: process.env.AUTH_PASSAGE_SECRET,
-      issuer: process.env.AUTH_PASSAGE_ISSUER,
-    }),
+    // Passage({
+    //   clientId: process.env.AUTH_PASSAGE_ID,
+    //   clientSecret: process.env.AUTH_PASSAGE_SECRET,
+    //   issuer: process.env.AUTH_PASSAGE_ISSUER,
+    // }),
     Patreon({
       clientId: process.env.AUTH_PATREON_ID,
       clientSecret: process.env.AUTH_PATREON_SECRET,
     }),
-    Pinterest({
-      clientId: process.env.AUTH_PINTEREST_ID,
-      clientSecret: process.env.AUTH_PINTEREST_SECRET,
-    }),
+    // Pinterest({
+    //   clientId: process.env.AUTH_PINTEREST_ID,
+    //   clientSecret: process.env.AUTH_PINTEREST_SECRET,
+    // }),
     Pipedrive({
       clientId: process.env.AUTH_PIPEDRIVE_ID,
       clientSecret: process.env.AUTH_PIPEDRIVE_SECRET,
@@ -282,10 +280,10 @@ export const config = {
       clientId: process.env.AUTH_STRAVA_ID,
       clientSecret: process.env.AUTH_STRAVA_SECRET,
     }),
-    Todoist({
-      clientId: process.env.AUTH_TODOIST_ID,
-      clientSecret: process.env.AUTH_TODOIST_SECRET,
-    }),
+    // Todoist({
+    //   clientId: process.env.AUTH_TODOIST_ID,
+    //   clientSecret: process.env.AUTH_TODOIST_SECRET,
+    // }),
     Trakt({
       clientId: process.env.AUTH_TRAKT_ID,
       clientSecret: process.env.AUTH_TRAKT_SECRET,
@@ -299,19 +297,19 @@ export const config = {
       clientSecret: process.env.AUTH_TWITTER_SECRET,
       version: "2.0",
     }),
-    UnitedEffects({
-      clientId: process.env.AUTH_UE_ID,
-      clientSecret: process.env.AUTH_UE_SECRET,
-      issuer: process.env.AUTH_UE_ISSUER,
-    }),
+    // UnitedEffects({
+    //   clientId: process.env.AUTH_UE_ID,
+    //   clientSecret: process.env.AUTH_UE_SECRET,
+    //   issuer: process.env.AUTH_UE_ISSUER,
+    // }),
     Vk({
       clientId: process.env.AUTH_VK_ID,
       clientSecret: process.env.AUTH_VK_SECRET,
     }),
-    Wikimedia({
-      clientId: process.env.AUTH_WIKIMEDIA_ID,
-      clientSecret: process.env.AUTH_WIKIMEDIA_SECRET,
-    }),
+    // Wikimedia({
+    //   clientId: process.env.AUTH_WIKIMEDIA_ID,
+    //   clientSecret: process.env.AUTH_WIKIMEDIA_SECRET,
+    // }),
     Wordpress({
       clientId: process.env.AUTH_WORDPRESS_ID,
       clientSecret: process.env.AUTH_WORDPRESS_SECRET,
@@ -324,10 +322,10 @@ export const config = {
       clientId: process.env.AUTH_YANDEX_ID,
       clientSecret: process.env.AUTH_YANDEX_SECRET,
     }),
-    Zitadel({
-      clientId: process.env.AUTH_ZITADEL_ID,
-      clientSecret: process.env.AUTH_ZITADEL_SECRET,
-    }),
+    // Zitadel({
+    //   clientId: process.env.AUTH_ZITADEL_ID,
+    //   clientSecret: process.env.AUTH_ZITADEL_SECRET,
+    // }),
     Zoho({
       clientId: process.env.AUTH_ZOHO_ID,
       clientSecret: process.env.AUTH_ZOHO_SECRET,
@@ -353,7 +351,11 @@ export function auth(
     | [NextApiRequest, NextApiResponse]
     | []
 ) {
-  return getServerSession(...args, config);
+  // return getServerSession(...args, config);
+  // return getServerSession(...args, config);
+  throw new Error(
+    "not working for current version of next-auth, restore to latest"
+  );
 }
 
 // We recommend doing your own environment variable validation

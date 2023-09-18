@@ -108,4 +108,4 @@ Follow the [Deployment documentation](https://authjs.dev/guides/basics/deploymen
 </a>
 <p align="left">Thanks to Vercel sponsoring this project by allowing it to be deployed for free for the entire Auth.js Team</p>
 
-[](https://www.google.com)
+[https://www.google.com](https://www.google.com)
