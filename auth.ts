@@ -3,8 +3,8 @@ import type {
   NextApiRequest,
   NextApiResponse,
 } from "next";
-import type { NextAuthOptions as NextAuthConfig } from "next-auth";
-import { getServerSession } from "next-auth";
+import type { NextAuthOptions as NextAuthConfig } from "next-auth/index";
+import { getServerSession } from "next-auth/index";
 
 import FortyTwoSchool from "next-auth/providers/42-school";
 import Apple from "next-auth/providers/apple";
